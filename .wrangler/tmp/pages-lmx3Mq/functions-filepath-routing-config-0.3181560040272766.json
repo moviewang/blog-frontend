@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/post/:id*",
+      "mountPath": "/api/post",
+      "method": "GET",
+      "module": [
+        "api/post/[[id]].js:onRequestGet"
+      ]
+    },
+    {
+      "routePath": "/api/post",
+      "mountPath": "/api",
+      "method": "GET",
+      "module": [
+        "api/post.js:onRequestGet"
+      ]
+    },
+    {
+      "routePath": "/api/posts",
+      "mountPath": "/api",
+      "method": "GET",
+      "module": [
+        "api/posts.js:onRequestGet"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
